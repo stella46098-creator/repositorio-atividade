@@ -13,11 +13,11 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Verificar página
-        run: test -f index.html
+        run: test -f index1.html
 
       - name: Verificar atualização
         run: |
-          if grep -q "Novo curso adicionado" index.html; then
+          if grep -q "Novo curso adicionado" index1.html; then
             echo "✓ A página possui a informação de atualização."
             echo "✓ Pull Request validado com sucesso!"
           else
